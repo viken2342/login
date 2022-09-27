@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="/b/css/bootstrap.css">
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+    <!-- nevbar start -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/index.html">Home</a>
+        <a href="/login.html">Login</a>
+        <a href="#">Registration</a>
+        <a href="/galery.html">Galery</a>
+        <a href="/contact.html">Contact Us</a>
+    </div>
+
+    <h2>Viken</h2>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    <!-- nevbar end -->
+    <div class="container">
+        <div class="row w-100 d-flex justify-content-center align-items-center main_div">
+            <div class="col-12 col-md-8 col-xxl-5">
+                <div class=" card py-3 px-2">
+                    <p class=" text-center text-capitalize"><span>Connect with us</span></p>
+                    <div class="row text-center">
+                        <div class="col-3 ">
+                            <a href="https://www.facebook.com/"><img src="/img/facebook.svg" alt=""></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="https://www.instagram.com/viken_lakkad_23/"><img src="/img/instagram.svg" alt=""></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="https://referral-assist.indeed.com/referral?sid=us_googrefasst-campaignid=18140475491-adgroupid=142128144644-creative=618018282461-device=c&kw=jobs%20at%20indeed"><img src="/img/linkedin.svg" alt=""></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="https://twitter.com/A32Viken"><img src="/img/twitter.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="div">
+                        <div class="row">
+                            <div class="col-12  text-center mt-3">
+                                <span class=" text-capitalize ">login </span>
+                            </div>
+                        </div>
+                        <form>
+                            <div class="mb-3 mt-4">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script Start -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <!-- script end -->
+</body></html>
