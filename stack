@@ -1,0 +1,120 @@
+#include <stdio.h> 
+#define n 5
+
+int Top = -1,data,s[n],i,x; 
+void Push();                                                                               
+void Pop();
+void Pip(); 
+void Change(); 
+void Display();
+
+int main()
+{
+    int choice, cont = 1;
+
+    while (cont == 1)
+    {
+        printf("\n\tOperations performed by Stack"); 
+        printf("\n\t1.Push the element"); 
+        printf("\n\t2.Pop the element"); 
+        printf("\n\t3.Pip the element"); 
+        printf("\n\t4.Change the element"); 
+        printf("\n\t5.Display");
+        printf("\n\tEnter the choice:"); 
+        scanf("%d", &choice);
+    switch (choice)
+    {
+        case 1:
+            Push(); 
+        break;
+        case 2:
+            Pop(); 
+        break;
+        case 3:
+            Pip(); 
+        break;
+        case 4:
+            Change(); 
+        break;  
+        case 5:
+            Display(); 
+        break;
+        default:
+            printf("\n\tInvalid choice.");
+    }
+        printf("\n\tDo you want to continue(1/0):");
+        scanf("%d", &cont);
+    }
+}
+
+void Push() 
+    {
+        if (Top == n - 1)
+        {
+            printf("\n\tOverflow");
+        }      
+        else
+        {
+            printf("\n\tEnter the data:"); 
+            scanf("%d", &data);
+            Top = Top + 1; 
+            s[Top] = data;
+        }
+}
+void Pop()
+{
+    if (Top == -1)
+        {
+            printf("\n\tUnderflow!!");
+        }
+    else
+        {
+            data=s[Top];
+            printf("\n\tPopped element: %d", s[Top]); 
+            Top = Top - 1;
+        }
+}
+
+void Pip()
+{
+if(Top == -1)
+{
+printf("\n\tUnderflow");
+}
+else
+{
+printf("\n\tEnter the index number:"); 
+scanf("%d",&i); 
+return s[Top-i+1];
+}
+}
+
+void Change()
+{
+if(Top == -1)
+{
+printf("\n\tUnderflow");
+}
+else
+{
+printf("\n\tEnter the index number:"); scanf("%d",&i); 
+printf("\n\tEnter the new value:"); scanf("%d",&x);
+s[Top-i+1]=x; printf("\n\t%d",s[Top-i+1]);
+}   
+}
+
+void Display()
+{
+
+if (Top == -1)
+{
+printf("\n\tUnderflow!!");
+}
+else
+{
+printf("\n\tElements present in the stack: \n"); for ( i = Top; i >= 0; --i)
+{
+printf("\n\t%d", s[i]);
+}
+}
+}
